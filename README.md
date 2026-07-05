@@ -26,7 +26,7 @@ Model | Strengths | Trade-offs / Weaknesses | Role in Project
 
     ├── StreamlitApp.py                # Main Streamlit web application script
     ├── BERT_Model_Training.ipynb      # Dataset preprocessing, training, and evaluation of BERT
-    └── LSTM_Model_Training.ipynb      # Dataset preprocessing, training, and evaluation of LSTM
+    ├── LSTM_Model_Training.ipynb      # Dataset preprocessing, training, and evaluation of LSTM
     ├── requirements.txt               # Managed Python dependencies
     ├── keras_tokenizer.pkl            # Trained Keras tokenizer for text-to-sequence conversion
     ├── pytorch_toxicity_lstm.pt       # Trained LSTM model 
