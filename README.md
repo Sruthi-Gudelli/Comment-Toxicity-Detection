@@ -24,11 +24,14 @@ Model | Strengths | Trade-offs / Weaknesses | Role in Project
 
 ### 📂 Project Structure
 
-    ├── StreamlitApp.py              # Main Streamlit web application script
-    ├── requirements.txt             # Managed Python dependencies
-    ├── keras_tokenizer.pkl          # Trained Keras tokenizer for text-to-sequence conversion
-    ├── pytorch_toxicity_lstm.pt     # Trained LSTM model 
-    └── README.md                    # Project documentation    
+    ├── StreamlitApp.py                  # Main Streamlit web application script
+    ├── notebooks/                       # Google Colab notebooks used for training
+    │   ├── BERT_Model_Training.ipynb    # Dataset preprocessing, training, and evaluation of BERT
+    │   └── BERT_Model_Training.ipynb    # Dataset preprocessing, training, and evaluation of LSTM
+    ├── requirements.txt                 # Managed Python dependencies
+    ├── keras_tokenizer.pkl              # Trained Keras tokenizer for text-to-sequence conversion
+    ├── pytorch_toxicity_lstm.pt         # Trained LSTM model 
+    └── README.md                        # Project documentation    
 
 ---
 
