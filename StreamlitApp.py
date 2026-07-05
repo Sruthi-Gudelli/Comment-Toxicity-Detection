@@ -5,11 +5,14 @@ import pickle
 import torch
 import torch.nn as nn 
 import re
+from keras.utils import pad_sequences
+from torch.utils.data import TensorDataset, DataLoader
 import nltk
 from nltk.corpus import stopwords
-from keras.utils import pad_sequences
-#from tensorflow.keras.preprocessing.text import Tokenizer
-from torch.utils.data import TensorDataset, DataLoader
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
 
 def Home_Page():
     st.title("Comment Toxicity Detection")
@@ -123,14 +126,14 @@ def Predictions_Page():
             return self.fc(out)
     
 
-    with open('C:/Users/HP/OneDrive/Desktop/GUVI-DS PROJECT REPORTS/keras_tokenizer.pkl', 'rb') as f:
+    with open('keras_tokenizer.pkl', 'rb') as f:
         tokenizer = pickle.load(f)
     
     vocab_size = 30000 
 
     device = torch.device("cpu")
     model = PyTorchLSTM(vocab_size=vocab_size, embedding_dim=128, hidden_dim=64, output_dim=6) 
-    model.load_state_dict(torch.load("C:/Users/HP/OneDrive/Desktop/GUVI-DS PROJECT REPORTS/pytorch_toxicity_lstm.pt", map_location=device))
+    model.load_state_dict(torch.load("pytorch_toxicity_lstm.pt", map_location=device))
     model.to(device)
     model.eval()
 
