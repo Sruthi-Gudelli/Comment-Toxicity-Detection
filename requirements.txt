@@ -1,0 +1,6 @@
+streamlit==1.57.0
+numpy==2.2.6
+pandas==2.3.3
+torch>=2.2.0 --index-url https://pytorch.org
+nltk>=3.8.1
+tensorflow-cpu>=2.12.0,<2.16.0
